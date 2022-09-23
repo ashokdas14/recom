@@ -42,8 +42,8 @@ node(){
 
     if(Provider.equals('GCP')){
         stage('Git Clone'){
-                        git branch: 'master', credentialsId: 'GitHub_Private_Key', url: 'git@github.com:ashokdas14/recommenders.git'
-                        sh 'chmod 777 /var/lib/jenkins/workspace/recommender'
+                        git branch: 'master', credentialsId: 'GitHub_Private_Key', url: 'git@github.com:ashokdas14/recom.git'
+                        sh 'chmod 777 /var/lib/jenkins/workspace/recom'
                     }
         stage("GCP"){
             dir ("${env.WORKSPACE}"){
