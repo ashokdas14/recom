@@ -5,7 +5,7 @@
 
 #DIR=${PWD}
 
-cd /var/lib/jenkins/workspace/recommender
+cd /var/lib/jenkins/workspace/recom
 
 BRANCH=${RANDOM}
 
