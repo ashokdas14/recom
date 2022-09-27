@@ -26,8 +26,8 @@
       }
     },
     "description": "Save cost by deleting idle image 'splunk-image'.",
-    "etag": "\"c2cc6f3ccf43f2cf\"",
-    "lastRefreshTime": "2022-09-22T07:00:00.999293Z",
+    "etag": "\"5eea748f2b8e7011\"",
+    "lastRefreshTime": "2022-09-25T07:00:00.999956Z",
     "name": "projects/699269491104/locations/global/recommenders/google.compute.image.IdleResourceRecommender/recommendations/17d75513-6a83-49f1-af19-831d3036fc61",
     "primaryImpact": {
       "category": "COST",
@@ -72,8 +72,8 @@
       }
     },
     "description": "Save cost by deleting idle image 'cr-jenkins-worker'.",
-    "etag": "\"2a78ad77ff0bd0b4\"",
-    "lastRefreshTime": "2022-09-22T07:00:00.999293Z",
+    "etag": "\"2fe4877726198431\"",
+    "lastRefreshTime": "2022-09-25T07:00:00.999956Z",
     "name": "projects/699269491104/locations/global/recommenders/google.compute.image.IdleResourceRecommender/recommendations/bd912db0-9e32-4012-87f9-07db2b26f52d",
     "primaryImpact": {
       "category": "COST",
