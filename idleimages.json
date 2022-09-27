@@ -22,7 +22,7 @@
         "location": "global",
         "recommendedAction": "Delete",
         "resource": "//compute.googleapis.com/projects/cr-devsecops-356707/global/images/splunk-image",
-        "resourceName": "splunk-image"
+        "resourceName": "splunk"
       }
     },
     "description": "Save cost by deleting idle image 'splunk-image'.",
