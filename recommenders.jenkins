@@ -42,9 +42,9 @@ node(){
 
     if(Provider.equals('GCP')){
         stage('Git Clone'){
-                        git branch: 'master', credentialsId: 'GitHub_Private_Key', url: 'git@github.com:ashokdas14/recom.git'
-                        sh 'chmod 777 /var/lib/jenkins/workspace/recom'
-                    }
+            git branch: 'master', credentialsId: 'GitHub_Private_Key', url: 'git@github.com:ashokdas14/recom.git'
+            sh 'chmod 777 /var/lib/jenkins/workspace/recom'
+        }
         stage("GCP"){
             dir ("${env.WORKSPACE}"){
                 sh 'chmod 755 gcp_recommender.sh'
@@ -52,9 +52,16 @@ node(){
             }
         }
     }
-    // else if(Provider.equals('AWS')){
-    //          stage("AWS"){
-    //              sh './aws_recommender.sh'
-    //         }  
-    //     }
+    else if(Provider.equals('AWS')){
+        stage('Git Clone'){
+            git branch: 'master', credentialsId: 'GitHub_Private_Key', url: 'git@github.com:ashokdas14/recom.git'
+            sh 'chmod 777 /var/lib/jenkins/workspace/recom'                    
+        }
+        stage("AWS"){
+            dir ("${env.WORKSPACE}"){
+                sh 'chmod 755 aws_recommender.sh'
+                sh './aws_recommender.sh' 
+            }
+        }
+    }
 }
