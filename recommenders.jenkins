@@ -56,7 +56,7 @@ node(){
         node ('worker02'){
             stage('Git Clone'){
                 git branch: 'main', url: 'https://github.com/manichukkapalli/AWS_Recommensations.git'
-                sh 'chmod 777 /var/lib/jenkins/workspace/recom'                    
+                sh 'chmod 777 /home/ashokdas_test1/jenkins/workspace/recom'                    
             }
             stage("AWS"){
                 dir ("${env.WORKSPACE}"){
