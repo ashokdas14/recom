@@ -54,7 +54,7 @@ node(){
     }
     else if(Provider.equals('AWS')){
         stage('Git Clone'){
-            git branch: 'master', credentialsId: 'GitHub_Private_Key', url: 'git@github.com:ashokdas14/recom.git'
+            git branch: 'main', url: 'https://github.com/manichukkapalli/AWS_Recommensations.git'
             sh 'chmod 777 /var/lib/jenkins/workspace/recom'                    
         }
         stage("AWS"){
