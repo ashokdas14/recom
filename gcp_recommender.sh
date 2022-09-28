@@ -13,7 +13,7 @@ git checkout -b "${BRANCH}"
 
 #CALLING THE GCP API
 PROJECT_ID=$(gcloud config get-value project)
-gcloud recommender recommendations list --project=$PROJECT_ID --billing-project=$PROJECT_ID --recommender=google.compute.image.IdleResourceRecommender --location=global --format=json > idleimages.json
+# gcloud recommender recommendations list --project=$PROJECT_ID --billing-project=$PROJECT_ID --recommender=google.compute.image.IdleResourceRecommender --location=global --format=json > idleimages.json
 
 #Description varaibale
 DESCRIPTION=$( jq -r '.[].description' < idleimages.json )

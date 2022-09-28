@@ -1,0 +1,60 @@
+node(){
+    properties([
+    parameters([
+        [$class: 'ChoiceParameter', 
+            choiceType: 'PT_SINGLE_SELECT', 
+            description: 'Select the Provider Name from the Dropdown List', 
+            filterLength: 1, 
+            filterable: false, 
+            name: 'Provider', 
+            randomName: 'choice-parameter-Provider', 
+            script: [
+                $class: 'GroovyScript', 
+                fallbackScript: [
+                    classpath: [], 
+                    sandbox: true, 
+                    script: 
+                        'return[\'Could not get Provider\']'
+                ], 
+                script: [
+                    classpath: [], 
+                    sandbox: true, 
+                    script: 
+                        'return["AWS","GCP"]'
+                ]
+            ]
+        ] 
+    ]),
+        pipelineTriggers([
+            parameterizedCron('''
+                TZ=Asia/Calcutta
+            #IST (Indian Standard Time)
+            #-----------------GCP--------------------------
+            #-------STARTUP----SBX---GCP---
+            15 09 * * 1-5 %Provider=GCP
+            
+            #--------------------AWS-------------------------------
+            #-------STARTUP----SBX---AWS---
+            00 09 * * 1-5 %Provider=AWS
+            ''')
+        ])
+    ])
+
+    if(Provider.equals('GCP')){
+        stage('Git Clone'){
+                        git branch: 'master', credentialsId: 'GitHub_Private_Key', url: 'git@github.com:ashokdas14/recom.git'
+                        sh 'chmod 777 /var/lib/jenkins/workspace/recom'
+                    }
+        stage("GCP"){
+            dir ("${env.WORKSPACE}"){
+                sh 'chmod 755 gcp_recommender.sh'
+                sh './gcp_recommender.sh' 
+            }
+        }
+    }
+    // else if(Provider.equals('AWS')){
+    //          stage("AWS"){
+    //              sh './aws_recommender.sh'
+    //         }  
+    //     }
+}
