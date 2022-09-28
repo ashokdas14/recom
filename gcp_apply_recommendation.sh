@@ -3,4 +3,4 @@ cd /var/lib/jenkins/workspace/recom
 
 RESOURCE_NAME=$( jq -r '.[].content.overview.resourceName' < idleimages.json )
 
-gcloud compute images delete $RESOURCE_NAME
+printf 'yes' | gcloud compute images delete $RESOURCE_NAME
