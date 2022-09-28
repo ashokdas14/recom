@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /var/lib/jenkins/workspace/recom
+cd /var/lib/jenkins/workspace/recommender-apply
 
 RESOURCE_NAME=$( jq -r '.[].content.overview.resourceName' < idleimages.json )
 
