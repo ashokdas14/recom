@@ -25,6 +25,7 @@
         "resourceName": "splunk"
       }
     },
+    
     "description": "Save cost by deleting idle image 'splunk'.",
     "etag": "\"c2cc6f3ccf43f2cf\"",
     "lastRefreshTime": "2022-09-22T07:00:00.999293Z",
