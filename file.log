@@ -1,6 +1,0 @@
-Save cost by deleting idle image 'splunk-image'.
-Save cost by deleting idle image 'cr-jenkins-worker'.
-//compute.googleapis.com/projects/cr-devsecops-356707/global/images/splunk-image
-//compute.googleapis.com/projects/cr-devsecops-356707/global/images/cr-jenkins-worker
-Delete
-Delete
