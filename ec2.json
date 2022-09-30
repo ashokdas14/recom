@@ -1,0 +1,110 @@
+{
+    "instanceRecommendations": [
+        {
+            "instanceArn": "arn:aws:ec2:us-east-1:876737291315:instance/i-09bda3910e4a06b7d",
+            "accountId": "876737291315",
+            "instanceName": "recommmendation Test",
+            "currentInstanceType": "t2.micro",
+            "finding": "OPTIMIZED",
+            "findingReasonCodes": [],
+            "utilizationMetrics": [
+                {
+                    "name": "CPU",
+                    "statistic": "MAXIMUM",
+                    "value": 8.52459016393431
+                },
+                {
+                    "name": "EBS_READ_OPS_PER_SECOND",
+                    "statistic": "MAXIMUM",
+                    "value": 24.566666666666666
+                },
+                {
+                    "name": "EBS_WRITE_OPS_PER_SECOND",
+                    "statistic": "MAXIMUM",
+                    "value": 8.383333333333333
+                },
+                {
+                    "name": "EBS_READ_BYTES_PER_SECOND",
+                    "statistic": "MAXIMUM",
+                    "value": 362044.26666666666
+                },
+                {
+                    "name": "EBS_WRITE_BYTES_PER_SECOND",
+                    "statistic": "MAXIMUM",
+                    "value": 91398.11666666667
+                },
+                {
+                    "name": "NETWORK_IN_BYTES_PER_SECOND",
+                    "statistic": "MAXIMUM",
+                    "value": 71.88805555555557
+                },
+                {
+                    "name": "NETWORK_OUT_BYTES_PER_SECOND",
+                    "statistic": "MAXIMUM",
+                    "value": 64.21611111111112
+                },
+                {
+                    "name": "NETWORK_PACKETS_IN_PER_SECOND",
+                    "statistic": "MAXIMUM",
+                    "value": 0.3680555555555555
+                },
+                {
+                    "name": "NETWORK_PACKETS_OUT_PER_SECOND",
+                    "statistic": "MAXIMUM",
+                    "value": 0.36944444444444446
+                }
+            ],
+            "lookBackPeriodInDays": 14.0,
+            "recommendationOptions": [
+                {
+                    "instanceType": "t3.micro",
+                    "projectedUtilizationMetrics": [
+                        {
+                            "name": "CPU",
+                            "statistic": "MAXIMUM",
+                            "value": 5.188880969351319
+                        }
+                    ],
+                    "platformDifferences": [
+                        "Hypervisor",
+                        "StorageInterface",
+                        "NetworkInterface"
+                    ],
+                    "performanceRisk": 1.0,
+                    "rank": 1,
+                    "migrationEffort": "VeryLow"
+                },
+                {
+                    "instanceType": "t2.micro",
+                    "projectedUtilizationMetrics": [
+                        {
+                            "name": "CPU",
+                            "statistic": "MAXIMUM",
+                            "value": 8.52459016393431
+                        }
+                    ],
+                    "platformDifferences": [],
+                    "performanceRisk": 1.0,
+                    "rank": 2,
+                    "migrationEffort": "VeryLow"
+                }
+            ],
+            "recommendationSources": [
+                {
+                    "recommendationSourceArn": "arn:aws:ec2:us-east-1:876737291315:instance/i-09bda3910e4a06b7d",
+                    "recommendationSourceType": "Ec2Instance"
+                }
+            ],
+            "lastRefreshTimestamp": "2022-09-28T06:29:32.823000+00:00",
+            "effectiveRecommendationPreferences": {
+                "cpuVendorArchitectures": [
+                    "CURRENT"
+                ],
+                "enhancedInfrastructureMetrics": "Inactive",
+                "inferredWorkloadTypes": "Active"
+            },
+            "inferredWorkloadTypes": []
+        }
+    ],
+    "errors": []
+}
