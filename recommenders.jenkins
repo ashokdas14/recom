@@ -86,7 +86,7 @@ node(){
             stage("MACHINE TYPE Recommendation"){
                 dir ("${env.WORKSPACE}"){
                     sh 'chmod 755 gcp_machinetype.sh'
-                    sh './gcp_mahinetype.sh'
+                    sh './gcp_machinetype.sh'
                 }
             }
         }
