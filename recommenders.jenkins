@@ -24,7 +24,7 @@ node(){
                 ]
             ]
         ]
-    ]), 
+    ], 
         [$class: 'CascadeChoiceParameter', 
             choiceType: 'PT_SINGLE_SELECT', 
             description: 'Select the Recommendation from the Dropdown List', 
@@ -51,7 +51,7 @@ node(){
                         '''
                 ]
             ]
-        ],
+        ]),
         pipelineTriggers([
             parameterizedCron('''
                 TZ=Asia/Calcutta
