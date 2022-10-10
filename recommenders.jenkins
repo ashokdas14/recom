@@ -20,7 +20,7 @@ node(){
                     classpath: [], 
                     sandbox: true, 
                     script: 
-                        'return["GCP"]'
+                        'return["GCP","AWS"]'
                 ]
             ]
         ]
