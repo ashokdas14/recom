@@ -45,7 +45,7 @@ node(){
                     classpath: [], 
                     sandbox: true, 
                     script: 
-                        ''' if(Provider.equals("GCP")){
+                        ''' if (Provider.equals("GCP")){
                                 return["MACHINE TYPE","IDLE IMAGES"]
                             }
                         '''
