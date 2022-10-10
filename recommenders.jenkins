@@ -81,7 +81,7 @@ node(){
         else if(Recommendation.equals('MACHINE TYPE')){
             stage('Git Clone'){
                 git branch: 'master', credentialsID: 'GitHub_Private_Key', url: 'git@github.com:ashokdas14/recom.git'
-                sh 'chmod 777 /va/lib/jenkins/workspace/recom'
+                sh 'chmod 777 /var/lib/jenkins/workspace/recom'
             }
             stage("MACHINE TYPE Recommendation"){
                 dir ("${env.WORKSPACE}"){
