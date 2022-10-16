@@ -24,7 +24,7 @@ RESOURCE=$( jq -r '.[].content.operationGroups[].operations[].resource' < idleim
 echo "Resource: ${RESOURCE}"
 
 #Recommended Action Variable
-ACTION=$( jq -r '.[].content.overview.recommendedAction' < idleimages.json )
+ACTION=$( jq -r '.[].recommenderSubtype' < idleimages.json )
 echo "Recommended Action: ${ACTION}"
 printf "${DESCRIPTION}\n${RESOURCE}\n${ACTION}" > file.log
 chmod 777 file.log

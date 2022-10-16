@@ -27,7 +27,7 @@ MACHINETYPE=$( jq -r '.[].content.overview.recommendedMachineType.name' < machin
 echo "${MACHINETYPE}"
 
 #Recommended Action Variable
-ACTION=$( jq -r '.[].content.overview.recommendedAction' < machinetype.json )
+ACTION=$( jq -r '.[].recommenderSubtype' < machinetype.json )
 echo "Recommended Action: ${ACTION}"
 printf "${DESCRIPTION}\n${RESOURCE}\n${MACHINETYPE}\n${ACTION}" > files.log
 chmod 777 files.log
