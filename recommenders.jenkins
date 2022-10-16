@@ -73,8 +73,8 @@ node(){
             }
             stage("IDLE IMAGES Recommendation"){
                 dir ("${env.WORKSPACE}"){
-                    sh 'chmod 755 gcp_recommender.sh'
-                    sh './gcp_recommender.sh' 
+                    sh 'chmod 755 recommendation.sh'
+                    sh './recommendation.sh idleimages' 
                 }
             }
         }
@@ -85,8 +85,8 @@ node(){
             }
             stage("MACHINE TYPE Recommendation"){
                 dir ("${env.WORKSPACE}"){
-                    sh 'chmod 755 gcp_machinetype.sh'
-                    sh './gcp_machinetype.sh'
+                    sh 'chmod 755 recommendation.sh'
+                    sh './recommendation.sh machinetype'
                 }
             }
         }
