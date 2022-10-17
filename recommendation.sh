@@ -34,7 +34,7 @@ then
     DESCRIPTION=$( jq -r '.[].description' < ${FILENAME}.json )
     RESOURCE=$( jq -r '.[].content.overview.resourceName' < ${FILENAME}.json )
     ACTION=$( jq -r '.[].recommenderSubtype' < ${FILENAME}.json )
-    printf "Descriptions:${DESCRIPTION}\n Resource Name:${RESOURCE}\n Action: ${ACTION}" > files.config
+    printf "Descriptions:\n ${DESCRIPTION}\n Resource Name:\n ${RESOURCE}\n Action:\n ${ACTION}" > files.config
     chmod 777 files.config
     chmod 777 ${FILENAME}.json
 fi
