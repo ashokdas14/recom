@@ -32,8 +32,7 @@ if [[ ${FILENAME} = idleimages ]]
 then
     #gcloud recommender recommendations list --project=$PROJECT_ID --billing-project=$PROJECT_ID --recommender=google.compute.image.IdleResourceRecommender --location=global --format=json > ${FILENAME}.json
     DESCRIPTION=$( jq -r '.[].description' < ${FILENAME}.json )
-    RESOURCE=$( jq -r '.[].content.operationGroups[].operations[].resource' < ${FILENAME}.json )
-    MACHINETYPE=$( jq -r '.[].content.overview.recommendedMachineType.name' < ${FILENAME}.json )
+    RESOURCE=$( jq -r '.[].content.overview.resourceName' < ${FILENAME}.json )
     ACTION=$( jq -r '.[].recommenderSubtype' < ${FILENAME}.json )
     printf "${DESCRIPTION}\n${RESOURCE}\n${MACHINETYPE}\n${ACTION}" > files.config
     chmod 777 files.config
