@@ -10,7 +10,19 @@ read RECOMMENDED < ${RECOMMEDNATION}
 if [[ ${RECOMMENDED} = CHANGE_MACHINE_TYPE ]]
 then
     echo "${RECOMMENDED}"
-    sed -n '/Resource Name:/,/Action:/{/Resource Name:/!{/Action:/!p}}' file.config
+    sed -n '/Resource Name:/,/Action:/{/Resource Name:/!{/Action:/!p}}' file.config > resources.log
+    while read -r RESOURCE
+    do
+        RESOURCE_NAME="${RESOURCE}"
+        while read -r IGNORE_RESOURCES
+        do
+            IGNORE_LIST="${IGNORE_RESOURCES}"
+            if [[ ${RESOURCE_NAME} != ${IGNORE_LIST} ]]
+            then
+
+            fi 
+        done < ignore_list.log
+    done < resource.log 
 fi
 
 if [[ ${RECOMMENDED} = DELETE_IMAGE ]]

@@ -86,7 +86,7 @@ node(){
             stage("MACHINE TYPE Recommendation"){
                 dir ("${env.WORKSPACE}"){
                     sh 'chmod 755 recommendation.sh'
-                    sh './recommendation.sh machinetype'
+                    sh './recommendation.sh machinetype us-east1-b'
                 }
             }
         }
